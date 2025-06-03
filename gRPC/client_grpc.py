@@ -31,7 +31,7 @@ def menu():
                 id_usuario = int(input("ID do usuário: "))
                 resposta = stub.ListarPlaylistsPorUsuario(spotify_pb2.UsuarioRequest(usuario_id=id_usuario))
                 for p in resposta.playlists:
-                    print(f"ID: {p.id}, Nome: {p.nome}, Usuário ID: {p.usuario_id}")
+                    print(f"ID: {p.id}, Nome: {p.nome}")
 
             elif opcao == "4":
                 id_playlist = int(input("ID da playlist: "))
@@ -43,7 +43,7 @@ def menu():
                 id_musica = int(input("ID da música: "))
                 resposta = stub.ListarPlaylistsPorMusica(spotify_pb2.MusicaRequest(musica_id=id_musica))
                 for p in resposta.playlists:
-                    print(f"ID: {p.id}, Nome: {p.nome}, Usuário ID: {p.usuario_id}")
+                    print(f"ID: {p.id}, Nome: {p.nome}")
 
             elif opcao == "0":
                 print("Encerrando cliente...")
